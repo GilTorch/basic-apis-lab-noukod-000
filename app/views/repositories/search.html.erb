@@ -8,7 +8,10 @@
 <% if @body_hash %>
   <ul>
     <% @body_hash["items"].each do |item| %>
-      <li><a href="<%= item["html_url"] %>"><%= item["html_url"] %></a></li>
+      <li>
+        <a href="<%= item["html_url"] %>"><%= item["html_url"] %></a>
+      </li>
     <% end %>
+    <p><%=@body_hash["description"]%></p>
   </ul>
 <% end %>
