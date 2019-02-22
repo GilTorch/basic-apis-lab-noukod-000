@@ -8,7 +8,7 @@
 <% if @body_hash %>
   <ul>
     <% @body_hash["items"].each do |item| %>
-      <a href="<%= item["owner"]["url"] %>"><%=item["owner"]["login"]%></a>
+      <a href="<%= item["owner"]["html_url"] %>"><%=item["owner"]["login"]%></a>
     <% end %>
   </ul>
 <% end %>
