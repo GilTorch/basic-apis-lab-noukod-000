@@ -5,4 +5,10 @@
   <%= submit_tag "Search Github!" %>
 <% end %>
 
-<a href="<% @body_hash["items"][0]["owner"]["url"]=%>">Owner</a>
+<% if @body_hash %>
+  <ul>
+    <% @body_hash.items.each do |item| %>
+      <a href="<%= item.owner.url %>"><%=item.owner.login%></a>
+    <% end %>
+  </ul>
+<% end %>
