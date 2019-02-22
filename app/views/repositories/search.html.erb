@@ -4,3 +4,5 @@
   <%= text_field_tag :query %>
   <%= submit_tag "Search Github!" %>
 <% end %>
+
+<a href="<% @body_hash["items"][0]["owner"]["url"]=%>">Owner</a>
