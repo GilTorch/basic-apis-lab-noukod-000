@@ -12,6 +12,7 @@ class RepositoriesController < ApplicationController
     end
 
     @body_hash=JSON.parse(@resp.body)
+    puts @body_hash.inspect
     render "search"
   end
 end
