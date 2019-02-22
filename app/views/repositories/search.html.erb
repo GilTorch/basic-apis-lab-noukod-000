@@ -10,8 +10,9 @@
     <% @body_hash["items"].each do |item| %>
       <li>
         <a href="<%= item["html_url"] %>"><%= item["html_url"] %></a>
+        <p><%=item["description"]%></p>
       </li>
     <% end %>
-    <p><%=@body_hash["description"]%></p>
+
   </ul>
 <% end %>
